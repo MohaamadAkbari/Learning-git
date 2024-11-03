@@ -83,3 +83,172 @@
 
         $ git restore .
     This command do nothing with untracked files.
+
+## Ignoring Files
+* **Purpose of Ignoring Files**: Prevents tracking of sensitive information like passwords, API keys, and local settings.
+* **.gitignore File**: Created at the root level of the project to specify files or patterns to ignore.
+* **Common Ignored Files**:
+
+        .DS_Store for macOS
+        .vscode/ folder for Visual Studio Code settings
+        node_modules for NPM projects
+        Custom files like authentication.js for tokens and keys
+        notes/
+        **/*-todo.md
+
+* **Git Behavior**: Ignored files are not uploaded to GitHub and are grayed out in Git status.
+* **Global Ignore File**: Can be set up for multiple projects using a config variable.
+
+        $ git config --global core.excludesfile [file]
+* **Clearing Cache**: Use the following command to clear cached files if .gitignore is updated after commits.
+
+        $ git rm -r --cached . 
+        $ git add .
+        $ git commit -m 'clear cache'
+
+## Difference between Commits:
+
+* **Using git diff**: The following command shows the differences between files, highlighting changes such as deletions and additions.
+
+        $ git diff
+
+    If you want to compare staged changes to your last commit:
+        $ git diff --staged
+
+* **Handling large changes**: For extensive changes, using Visual Studio Code's source control editor can make it easier to view and manage differences.
+
+* **Comparing commits**: You can compare a file to its state at any previous commit using git diff and the commit hash.
+
+* **Git Lens extension**: For frequent comparisons between branches and checkpoints, the Git Lens extension in Visual Studio Code is recommended.
+
+## Deleting and Renaming Files
+
+#### Deleting a file
+
+* **Direct Deletion**: You can delete a file directly from the file system or using Visual Studio Code. Git will track this deletion and you need to stage and commit it.
+
+* **Git RM Command**: Using the following command, the file is deleted and the deletion is automatically staged.
+
+        $ git rm <file>, 
+
+#### Restoring Files:
+* **Git Restore Command**: Use the following command to bring back a deleted file. For staged deletions, use git restore --staged <file>.
+
+        $ git restore <file> 
+
+#### Renaming Files:
+
+* **Direct Renaming**: Renaming a file directly in the file system is tracked by Git as a deletion of the old file and addition of the new file.
+Git MV Command: Use the following command to rename a file, which stages the change automatically.
+
+        $ git mv <old_name> <new_name> 
+
+## Changing History
+
+* **Amending Commits**: You can amend the last commit to include additional changes without creating a new commit, keeping your commit history clean.
+* To add changes to the last commit, command with new messages or no new messages,
+
+        $ git commit --amend
+        $ git commit --amend -m 'New commit message'
+        $ git commit --amend --no-edit
+
+
+* **Resetting**: The git reset command allows you to move back to a previous commit, either keeping changes (--soft) or discarding them (--hard).
+
+        $ git restore <commit>
+        $ git restore --hard <commit>
+
+* **Rebasing**: Rebasing lets you take commits from one branch and apply them to another, effectively rewriting the commit history to make it cleaner or to reorder commits.
+
+        $ git rebase <branch>/<commit>
+        $ git rebase --interactive <branch>/<commit>
+        $ git rebase - i HEAD-#
+        $ git rebase -i --root
+
+## Branches
+
+* **Creating Branches**: Branches allow you to create different versions of your code to experiment with new features without affecting the stable version. 
+* To see current branches, command
+
+        $ git branch
+
+* To copy a new brach command git switch -c or the older git checkout -b to create a new branch.
+
+        $ git switch -c NAME
+        $ git checkout -b NAME
+
+* **Managing Branches**: You can switch between branches using git switch and view all branches with git branch. After making changes in a branch, use git add and git commit to save those changes.
+
+* **Merging Branches**: To merge changes from one branch into another, switch to the target branch and use git merge. 
+
+        $ git merge <branch>
+
+* **Deleting Branches**: After merging, it's a good practice to delete the feature branch using git branch -d.
+
+        $ git branch --delete NAME
+        $ git branch -d NAME
+        $ git branch -D 
+
+### Git FLow
+* Developers do the following flow on real projects:
+    * Feature/fix branch
+    * Make changes
+    * Merge to master
+    * Delete old branch
+
+## Merging Conflicts
+
+* **Understanding Merge Conflicts**: Merge conflicts occur when changes are made to the same part of a file in different branches. This typically happens when multiple people are working on the same project.
+
+* **Resolving Conflicts** : The video demonstrates how to resolve merge conflicts using Visual Studio Code, which provides helpful indicators to choose between conflicting changes.
+
+* **Best Practices**: It’s important to decide which changes to keep and manually adjust the code to resolve conflicts, ensuring that the final version is correct and consistent.
+
+## Stashing and Cleaning
+
+* **Git Stash**: Temporarily stores changes so you can work on something else without losing your current progress. Commands include git stash, git stash list, git stash apply, and git stash pop.
+
+* To store changes, use the command
+
+        $ git stash
+
+* To see the stored changes, use the command
+
+        $ git stash list
+
+* The following command allows you to apply a stash set of changes.
+
+        $ git stash apply <index>
+
+* The following command remove the git stash from the list
+
+        $ git stash pop
+
+* **Git Clean**: Removes untracked files and directories from your working directory. Use git clean -n to preview what will be removed and git clean -df to execute the clean.
+
+        $ git clean -n
+        $ git clean -d
+        $ git clean -f
+
+# GitHub
+
+* GitHub as a Collaborative Platform: GitHub is an online service that allows developers to work together, often referred to as a social coding website.
+
+* Core Functions: It provides tools for tracking changes, assigning issues, and deploying code. It also includes project management tools like Kanban boards.
+
+* Setting Up and Using GitHub: Key actions include setting up a remote repository, pushing local changes to GitHub, and fetching and pulling changes from the remote repository.
+
+## Pushing to GitHub
+
+* Setting Up Remotes: Use git remote add <name> <URL> to connect your local project to a remote repository. Commonly, the remote name is "origin".
+
+        $ git remote add <name> <URL>
+
+
+* Pushing Changes: Use git push to move files from your local machine to GitHub. The first push requires the -u option to set the upstream branch.
+
+        $ git push -u origin main
+        $ git push --all
+        $ git branch --set-upstream-to <origin/remote-branch>
+
+* Managing Remotes: You can list, remove, and rename remotes using commands like git remote -v, git remote remove <name>, and git remote rename <old-name> <new-name>.
