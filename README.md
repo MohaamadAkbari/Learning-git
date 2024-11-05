@@ -252,3 +252,32 @@ Git MV Command: Use the following command to rename a file, which stages the cha
         $ git branch --set-upstream-to <origin/remote-branch>
 
 * Managing Remotes: You can list, remove, and rename remotes using commands like git remote -v, git remote remove <name>, and git remote rename <old-name> <new-name>.
+
+## Github Options
+
+* **Branch Management**: You can manage branches directly in GitHub, including creating, editing, and deleting branches.
+
+* **File Management**: GitHub allows you to edit files, add new files, and organize them into directories.
+
+* **Tags and Topics**: You can add tags to your projects to make them easier to find and add topics to help others discover your work.
+
+* **Issues and Pull Requests**: Use issues to track tasks and pull requests to approve changes made by others.
+
+* **GitHub Pages**: Host your website for free using GitHub Pages, which allows you to serve static sites directly from a GitHub repository.
+
+## Github Workflow
+
+* **Branch-Based Workflow**: GitHub Flow is a branch-based workflow where the main branch contains the current version of the code. Changes are made in feature branches, which are copies of the main branch.
+
+* **Feature Branches**: To modify the code, you create a feature branch. This allows you to work on new features or changes without affecting the main branch.
+
+* **Commits and Pushes**: Changes are made in the feature branch, committed, and then pushed back to the feature branch. Each commit should be an isolated and complete change.
+
+* **Pull Requests**: When ready, you create a pull request to merge changes from the feature branch back into the main branch. This allows for feedback and code review from others.
+
+* **Code Review and Feedback**: Reviewers can leave comments, feedback, and suggestions on the pull request. This collaborative process helps ensure code quality.
+
+* **Merging Changes**: Once the pull request is approved, the changes are merged into the main branch. This process may involve reviewing differences between the feature branch and the main branch.
+
+* **Deleting Feature Branches**
+: After merging, the feature branch can be deleted to indicate the process is complete.
