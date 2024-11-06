@@ -273,6 +273,8 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 
 * **Commits and Pushes**: Changes are made in the feature branch, committed, and then pushed back to the feature branch. Each commit should be an isolated and complete change.
 
+## Pull Requests
+
 * **Pull Requests**: When ready, you create a pull request to merge changes from the feature branch back into the main branch. This allows for feedback and code review from others.
 
 * **Code Review and Feedback**: Reviewers can leave comments, feedback, and suggestions on the pull request. This collaborative process helps ensure code quality.
@@ -281,3 +283,81 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 
 * **Deleting Feature Branches**
 : After merging, the feature branch can be deleted to indicate the process is complete.
+
+## Pull Requests Features
+
+* **Creating a Pull Request**: You can initiate a pull request directly on GitHub by editing a file, previewing changes, and proposing the changes to create a new branch.
+
+* **Managing Pull Requests**: Pull requests allow you to have conversations, add comments, and assign reviewers to discuss and approve changes before merging them into the main branch.
+
+* **Project Management Features**: GitHub provides tools like labels, milestones, and issue linking to manage and track pull requests effectively.
+
+* **Comparing Branches**: You can compare different branches to see changes before and after a pull request, allowing flexibility in viewing various branches.
+
+* **Draft Pull Requests**: These serve as placeholders for work-in-progress, enabling discussions and comments before the final review.
+
+* **Review Process**: Pull requests facilitate conversations, comments, and reviews, with options to assign reviewers and use tools like GitGuardian for security checks.
+
+* **Resolving Comments**: You can address comments made during the review by editing the code and marking the conversation as resolved.
+
+* **Pushing Updates**: After making changes, commit and sync your updates to the repository to reflect the resolved issues.
+
+* **Merging Pull Requests**: Once all comments are addressed and changes are committed, you can merge the pull request to finalize the review process.
+
+## CodeOwners
+
+* **Creating a CODEOWNERS File**: You can create a CODEOWNERS file in your repository to assign ownership of files and directories to specific users.
+
+* **Branch Protection**: You can set branch protection rules to require pull requests and approvals before merging changes, enhancing security and control.
+
+* **Automatic Notifications**: The assigned owners will automatically receive notifications for any changes, ensuring they are involved in the review process.
+
+## Organizing Projects
+
+* **Collaborators**: You can invite others to work on your project, enhancing collaboration.
+
+* **Issues**: Create and manage issues to track tasks and bugs, using labels and milestones for better organization.
+
+* **Projects**: Use GitHub projects to visualize and manage the progress of your work, with options like Kanban boards for effective project management.
+
+## Repository Insights
+
+* **Insights Tab**: Provides detailed information about the repository, including activity, contributors, and community standards.
+
+* **Graphs and Metrics**: Displays various metrics such as merge pull requests, additions and deletions, and traffic sources.
+
+* **Community Standards**: Shows how the repository compares to GitHub's recommended community standards and allows you to create necessary files.
+
+* **Dependency Management**: Features like Dependabot help track and update project dependencies.
+
+* **Forks and Stars**: Information on forks, stars, and watchers, indicating the repository's popularity and engagement.
+
+## GitHub Shortcuts
+
+* **Question Mark (?)**: Displays a list of most shortcuts, which are context-sensitive.
+
+* **Slash (/)**: Used for searching within repositories, also context-sensitive.
+
+* **Command Palette**: Accessed with Command + K on Mac or Control + K on Windows, providing a powerful search and navigation tool.
+
+* **Period (.)**: Opens the repository in a lightweight editor at github.dev.
+
+* **Feature Preview**: Allows you to enable and test upcoming GitHub features.
+
+## Synching GitHub and local repository
+
+* **git clone**: Copies a GitHub repository to your local hard drive.
+
+        $ git clone <URL>
+
+* **git fetch**: Downloads information from the remote repository to your local repo without merging it.
+
+        $ git fetch
+
+* **git pull**: Combines fetching and merging data from the remote repository to your local version.
+
+        $ git pull
+
+* **Branch Management**: Commands like git branch -a and using Visual Studio Code to manage and switch between branches.
+
+* **Releases**: Creating official versions of your project using GitHub releases for specific versions of your code.
