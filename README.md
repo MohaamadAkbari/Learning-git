@@ -281,3 +281,29 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 
 * **Deleting Feature Branches**
 : After merging, the feature branch can be deleted to indicate the process is complete.
+
+## Pull Requests
+
+* **Creating a Pull Request**: You can initiate a pull request directly on GitHub by editing a file, previewing changes, and proposing the changes to create a new branch.
+
+* **Managing Pull Requests**: Pull requests allow you to have conversations, add comments, and assign reviewers to discuss and approve changes before merging them into the main branch.
+
+* **Project Management Features**: GitHub provides tools like labels, milestones, and issue linking to manage and track pull requests effectively.
+
+* **Comparing Branches**: You can compare different branches to see changes before and after a pull request, allowing flexibility in viewing various branches.
+
+* **Draft Pull Requests**: These serve as placeholders for work-in-progress, enabling discussions and comments before the final review.
+
+* **Review Process**: Pull requests facilitate conversations, comments, and reviews, with options to assign reviewers and use tools like GitGuardian for security checks.
+
+* **Resolving Comments**: You can address comments made during the review by editing the code and marking the conversation as resolved.
+
+* **Pushing Updates**: After making changes, commit and sync your updates to the repository to reflect the resolved issues.
+
+* **Merging Pull Requests**: Once all comments are addressed and changes are committed, you can merge the pull request to finalize the review process.
+
+* **Creating a CODEOWNERS File**: You can create a CODEOWNERS file in your repository to assign ownership of files and directories to specific users.
+
+* **Branch Protection**: You can set branch protection rules to require pull requests and approvals before merging changes, enhancing security and control.
+
+* **Automatic Notifications**: The assigned owners will automatically receive notifications for any changes, ensuring they are involved in the review process.
