@@ -284,7 +284,11 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 * **Deleting Feature Branches**
 : After merging, the feature branch can be deleted to indicate the process is complete.
 
+<<<<<<< HEAD
 ## Pull Requests Features
+=======
+## Pull Requests
+>>>>>>> refs/remotes/origin/main
 
 * **Creating a Pull Request**: You can initiate a pull request directly on GitHub by editing a file, previewing changes, and proposing the changes to create a new branch.
 
@@ -304,12 +308,16 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 
 * **Merging Pull Requests**: Once all comments are addressed and changes are committed, you can merge the pull request to finalize the review process.
 
+<<<<<<< HEAD
 ## CodeOwners
 
+=======
+>>>>>>> refs/remotes/origin/main
 * **Creating a CODEOWNERS File**: You can create a CODEOWNERS file in your repository to assign ownership of files and directories to specific users.
 
 * **Branch Protection**: You can set branch protection rules to require pull requests and approvals before merging changes, enhancing security and control.
 
+<<<<<<< HEAD
 * **Automatic Notifications**: The assigned owners will automatically receive notifications for any changes, ensuring they are involved in the review process.
 
 ## Organizing Projects
@@ -361,3 +369,6 @@ Git MV Command: Use the following command to rename a file, which stages the cha
 * **Branch Management**: Commands like git branch -a and using Visual Studio Code to manage and switch between branches.
 
 * **Releases**: Creating official versions of your project using GitHub releases for specific versions of your code.
+=======
+* **Automatic Notifications**: The assigned owners will automatically receive notifications for any changes, ensuring they are involved in the review process.
+>>>>>>> refs/remotes/origin/main
