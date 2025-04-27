@@ -37,6 +37,7 @@
 
 * This creates a new subdirectory named .git. Next, add the files into git:
 
+        $ git add <filename>
         $ git add .
         $ git commit -m 'message'
 
